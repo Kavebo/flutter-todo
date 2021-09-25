@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -29,10 +30,32 @@
   <title>todo_app</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <!-- Firebase Configuration -->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBl6XJoBGZllA49Fr4v-p_GgzGxBjftonk",
+      authDomain: "flutter-todo-a35ab.firebaseapp.com",
+      projectId: "flutter-todo-a35ab",
+      storageBucket: "flutter-todo-a35ab.appspot.com",
+      messagingSenderId: "281057504700",
+      appId: "1:281057504700:web:40ea3ad719690fec04cfb9"
+    };
+
+    console.log('[] firebase', firebase);
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;
@@ -98,4 +121,5 @@
     }
   </script>
 </body>
+
 </html>
